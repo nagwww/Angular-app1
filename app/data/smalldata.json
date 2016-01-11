@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "first_name": "John",
+            "last_name": "Smith",
+            "location": "SFO"
+        },
+        {
+            "first_name": "Nag",
+            "last_name": "M",
+            "location": "CA"
+        },
+        {
+            "first_name": "Rob",
+            "last_name": "Smith",
+            "location": "MT"
+        },
+        {
+            "first_name": "Ron",
+            "last_name": "B",
+            "location": "MI"
+        }
+
+    ]
+}
