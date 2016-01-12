@@ -3,27 +3,17 @@
 import os
 import boto
 import sys, getopt
+from boto.s3.key import Key
 from boto.s3.connection import S3Connection, OrdinaryCallingFormat
 
-#os.chdir("../")
-
-from boto.s3.key import Key
-
 failed = open('failed','w')
-#sourceDir = sys.argv[1]
 sourceDir = "./app/"
 my_list = []
 count=0
-
-
 bucket_name = "ramaideas"
 
-print sourceDir
-
-def uploadfile():
-        print(os.getcwd() + "\n")
+def uploadtos3():
 	bucket = conn.get_bucket(bucket_name,validate=False)
-        print bucket.name, "======", sourceDir
 	k = Key(bucket)
 	for path,dir,files in os.walk(sourceDir):
                 print "path", path
@@ -126,4 +116,4 @@ def uploadfile():
 
 if __name__ == "__main__":
 	conn = boto.connect_s3(calling_format = OrdinaryCallingFormat())
-	uploadfile()
+	uploadtos3()
