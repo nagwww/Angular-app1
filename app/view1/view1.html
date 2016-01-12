@@ -1,13 +1,15 @@
 <div ng-controller="View1Ctrl">
+
+
     <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
         <thead>
         <tr><br><br>
             <p>
 
             </p>
-            <th colspan="6"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+            <th colspan="6"><input st-search="" class="form-control" placeholder="global search ..." type="search"/> </th>
         </tr>
-        <tr>
+
             <th st-sort="name">First Name</th>
             <th st-sort="description">Last Name</th>
             <th st-sort="cloudtrailIndex">Location</th>
@@ -19,6 +21,7 @@
             <td>{{row.first_name}}</td>
             <td>{{row.last_name}}</td>
             <td>{{row.location}}</td>
+
         </tr>
         </tbody>
     </table>

@@ -1,15 +1,44 @@
-<pre>
+<div ng-controller="View2Ctrl">
+
+  <br><br><br>
+		<button type="button" ng-click="addRandomItem(row)" class="btn btn-sm btn-success">
+			<i class="glyphicon glyphicon-plus">
+			</i> Add random item
+		</button>
+
+		<table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
+			<thead>
+			<tr>
+				<th st-sort="firstName">Ball 1</th>
+				<th st-sort="lastName">Ball 2</th>
+				<th st-sort="birthDate">Ball 3</th>
+				<th st-sort="balance">Ball 4</th>
+               <th st-sort="balance">Ball 5</th>
+  				<th st-sort="balance">Powerball</th>
+
+			</tr>
+			<tr>
+
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="row in rowCollection">
+				<td>{{row.firstName}}</td>
+				<td>{{row.lastName}}</td>
+				<td>{{row.birthDate}}</td>
+				<td>{{row.balance}}</td>
+              				<td>{{row.ball4}}</td>
+                            				<td>{{row.ball5}}</td>
 
 
+				<td>
+				<button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
+					<i class="glyphicon glyphicon-remove-circle">
+					</i>
+				</button>
+				</td>
+			</tr>
+			</tbody>
+		</table>
 
-
-
-
-
-
-
-  A Quick Agnular app for prototyping ..
-</pre>
-<p>
-
-</p>
+	</div>

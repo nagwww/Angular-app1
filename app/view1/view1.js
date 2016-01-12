@@ -18,7 +18,6 @@ angular.module('myApp.view1', ['ngRoute'])
         console.log(accounts.data)
     });
 
-
     //copy the references (you could clone ie angular.copy but then have to go through a dirty checking for the matches)
     $scope.displayedCollection = [].concat($scope.rowCollection);
 
